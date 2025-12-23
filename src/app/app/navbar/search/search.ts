@@ -12,28 +12,14 @@ import { FormsModule } from '@angular/forms';
            })
 export class SearchBarComponent {
   @Input() placeholder: string = 'Search...';
-  @Input() debounceTime: number = 300;
-  @Output() searchChange = new EventEmitter<string>();
-  @Output() search = new EventEmitter<string>();
+  @Input() showButton: boolean = true; // Toggle the right-side search button
 
-  searchTerm: string = '';
-  private debounceTimer: any;
+  @Output() onSearch = new EventEmitter<string>();
 
-  onSearchChange(): void {
-    clearTimeout(this.debounceTimer);
-    this.debounceTimer = setTimeout(() => {
-      this.searchChange.emit(this.searchTerm);
-    }, this.debounceTime);
-  }
+  query: string = '';
 
-  onSearch(): void {
-    this.search.emit(this.searchTerm);
-  }
-
-  clearSearch(): void {
-    this.searchTerm = '';
-    this.searchChange.emit('');
-    this.search.emit('');
+  handleSearch() {
+    this.onSearch.emit(this.query);
   }
 }
 

@@ -1,1 +1,15 @@
-<p>user-profile works!</p>
+<div class="profile-container">
+  <img [src]="imageUrl" alt="User Avatar" class="profile-img" />
+
+  <div class="info-panel">
+    <span class="user-name">{{ displayName }}</span>
+
+    <div class="bottom-row">
+      <span class="user-handle">{{ handle }}</span>
+
+      @if (isPro) {
+        <i class="fa-solid fa-crown pro-icon" title="Pro Member"></i>
+      }
+    </div>
+  </div>
+</div>

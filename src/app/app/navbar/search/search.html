@@ -1,42 +1,14 @@
-<div class="search-container">
-  <div class="search-wrapper">
-    <svg
-      class="search-icon"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-    >
-      <circle cx="11" cy="11" r="8"></circle>
-      <path d="m21 21-4.35-4.35"></path>
-    </svg>
+<div class="search-wrapper">
+  <div class="input-container">
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
 
     <input
       type="text"
-      class="search-input"
+      [(ngModel)]="query"
       [placeholder]="placeholder"
-      [(ngModel)]="searchTerm"
-      (input)="onSearchChange()"
-      (keyup.enter)="onSearch()"
+      (keyup.enter)="handleSearch()"
+      class="search-input"
     />
-
-    <button
-      *ngIf="searchTerm"
-      class="clear-button"
-      (click)="clearSearch()"
-      aria-label="Clear search"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
   </div>
+
 </div>

@@ -2,25 +2,23 @@
   <div class="navbar__container">
     <!-- Logo -->
     <div class="navbar__logo-container">
-      <a routerLink="/" class="navbar__logo">
-        <span>BlockUI</span>
-      </a>
+      <app-logo/>
     </div>
+
+    <app-user-profile
+      [imageUrl]="'https://i.pravatar.cc/150?u=a042581f4e29026704d'"
+      displayName="Alex Johnson"
+      handle="@alex_j"
+      [isPro]="true">
+    </app-user-profile>
 
 
     <!-- Desktop Links -->
     <ul class="navbar__links">
       <li><a routerLink="/dashboard">Dashboard</a></li>
       <li><a routerLink="/projects">Projects</a></li>
-      <li><a routerLink="/pricing">Pricing</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
     </ul>
 
-    <!-- CTA -->
-    <div class="navbar__actions">
-      <button class="btn-secondary">Login</button>
-      <button class="btn-primary">Get Started</button>
-    </div>
 
     <!-- Alert Button -->
     <app-nav-button label="2 New" leftIcon="fa-regular fa-bell"/>
@@ -28,11 +26,9 @@
     <!-- Search Bar -->
     <div style="padding: 20px;">
       <app-search-bar
-        placeholder="Search products..."
-        [debounceTime]="500"
-        (searchChange)="onSearchChange($event)"
-        (search)="onSearch($event)"
-      ></app-search-bar>
+        placeholder="Search for notifications..."
+        (onSearch)="mySearchFunction($event)">
+      </app-search-bar>
     </div>
 
     <!-- Settings Button -->

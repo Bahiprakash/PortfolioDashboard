@@ -1,0 +1,32 @@
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.logo-wrapper:hover {
+  opacity: 0.85;
+}
+
+.icon-box {
+  background: linear-gradient(135deg, #6200ee, #b388ff);
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(98, 0, 238, 0.3);
+}
+
+.app-name {
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  font-family: 'Inter', sans-serif;
+}
