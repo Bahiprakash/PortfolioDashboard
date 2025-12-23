@@ -1,7 +1,4 @@
 <aside class="sidebar" [class.collapsed]="isCollapsed()">
-  <button class="toggle-btn" (click)="toggleSidebar()">
-    <i class="fa-solid" [ngClass]="isCollapsed() ? 'fa-chevron-right' : 'fa-chevron-left'"></i>
-  </button>
 
   <div class="sidebar-content">
     <div class="nav-section">
@@ -12,10 +9,16 @@
       </app-glass-button>
 
       <app-glass-dropdown
-        label="Trading"
+        label="Charts"
         iconClass="fa-solid fa-chart-pie"
         [isSidebarCollapsed]="isCollapsed()">
       </app-glass-dropdown>
+
+      <app-glass-button
+        [label]="isCollapsed() ? '' : 'My Coins'"
+        iconClass="fa-solid fa-coins"
+        [class.mini]="isCollapsed()">
+      </app-glass-button>
 
       <app-glass-button
         [label]="isCollapsed() ? '' : 'Market'"
@@ -23,17 +26,37 @@
         [class.mini]="isCollapsed()">
       </app-glass-button>
 
+      <app-glass-dropdown
+        label="Trading"
+        iconClass="fa-solid fa-up-down"
+        [isSidebarCollapsed]="isCollapsed()">
+      </app-glass-dropdown>
+
       <app-glass-button
-        [label]="isCollapsed() ? '' : 'Wallet'"
+        [label]="isCollapsed() ? '' : 'Transactions'"
         iconClass="fa-solid fa-wallet"
         [class.mini]="isCollapsed()">
       </app-glass-button>
-    </div>
-    <span class="spacer"></span>
-    <div class="nav-section-bottom">
-      <app-glass-radio (selectedChange)="onToggleChange($event)"/>
+
+      <app-glass-button
+        [label]="isCollapsed() ? '' : 'Academy'"
+        iconClass="fa-solid fa-graduation-cap"
+        [class.mini]="isCollapsed()">
+      </app-glass-button>
+
+      <app-glass-button
+        [label]="isCollapsed() ? '' : 'API Data'"
+        iconClass="fa-solid fa-cube"
+        [class.mini]="isCollapsed()">
+      </app-glass-button>
+
       <app-cookie-card [isSidebarCollapsed]="isCollapsed()"></app-cookie-card>
     </div>
 
+    <span class="spacer"></span>
+    <div class="nav-section-bottom">
+      <app-glass-radio (selectedChange)="onToggleChange($event)"/>
+
+    </div>
   </div>
 </aside>
