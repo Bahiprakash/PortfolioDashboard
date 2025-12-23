@@ -1,5 +1,6 @@
 .dashboard-content {
   flex: 1;
+  flex-direction: column;
   height: 100%;
   padding: 30px;
   overflow-y: auto;
@@ -9,6 +10,8 @@
 
 .content-header {
   display: flex;
+  font-size: 18px;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
@@ -54,4 +57,8 @@
   .hero-card {
     grid-column: span 1; /* Stack normally on tablets/phones */
   }
+}
+
+.filter-actions{
+  width: 400px;
 }

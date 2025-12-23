@@ -23,14 +23,19 @@
   color: rgba(255, 255, 255, 0.5);
   font-weight: 500;
   transition: color 0.3s ease;
+  font-family: 'Inter', sans-serif;
 }
 
 .option.active {
   color: #ffffff;
+  align-items: center;
+  justify-content: center;
 }
 
 .option i {
   font-size: 14px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* The Sliding Glass Element */
