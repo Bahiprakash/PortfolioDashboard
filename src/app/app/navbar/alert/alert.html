@@ -1,1 +1,11 @@
-<p>alert works!</p>
+<button class="glass-alert-btn">
+  <div class="btn-shine"></div>
+
+  <div class="icon-container">
+    <i [class]="iconClass"></i>
+
+    @if (hasNotification) {
+      <span class="notification-dot"></span>
+    }
+  </div>
+</button>

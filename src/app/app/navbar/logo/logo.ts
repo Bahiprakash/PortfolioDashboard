@@ -7,6 +7,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './logo.css',
 })
 export class Logo {
-  @Input() iconClass: string = 'fa-solid fa-bitcoin-sign';
+  @Input() iconClass: string = 'fa-solid fa-star';
   @Input() appName: string = 'Crypto Link';
 }

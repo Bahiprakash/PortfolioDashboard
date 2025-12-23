@@ -1,0 +1,72 @@
+.glass-alert-btn {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Edge shine */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  outline: none;
+}
+
+/* --- Hover Effect --- */
+.glass-alert-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(179, 136, 255, 0.6); /* Purple theme accent */
+  box-shadow: 0 0 15px rgba(179, 136, 255, 0.3);
+
+}
+
+.btn-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+}
+
+.glass-alert-btn:hover .btn-shine {
+  left: 100%;
+  transition: left 0.6s ease-in-out;
+}
+
+/* Icon & Badge */
+.icon-container {
+  position: relative;
+  color: white;
+  font-size: 18px;
+}
+
+.glass-alert-btn:hover .icon-container {
+  color: #b388ff;
+}
+
+.notification-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background-color: #ff5252;
+  border-radius: 50%;
+  border: 2px solid #0f0f0f; /* Matches navbar dark bg */
+  box-shadow: 0 0 8px rgba(255, 82, 82, 0.6);
+}
+
+/* Click Animation */
+.glass-alert-btn:active {
+  transform: scale(0.95);
+}

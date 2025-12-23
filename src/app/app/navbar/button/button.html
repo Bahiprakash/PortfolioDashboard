@@ -1,11 +1,4 @@
-<button class="btn-container" [disabled]="disabled">
-  @if (leftIcon) {
-    <i [class]="leftIcon" class="icon-left"></i>
-  }
-
+<button class="glass-nav-btn">
+  <div class="btn-shine"></div>
   <span class="btn-text">{{ label }}</span>
-
-  @if (rightIcon) {
-    <i [class]="rightIcon" class="icon-right"></i>
-  }
 </button>

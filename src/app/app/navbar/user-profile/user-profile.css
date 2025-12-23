@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 12px;
+  padding: 10px 18px;
   background: #1e1e1e; /* Dark background to make white text pop */
-  border-radius: 12px;
+  border-radius: 32px;
   width: fit-content;
   transition: background 0.2s ease;
   cursor: pointer;

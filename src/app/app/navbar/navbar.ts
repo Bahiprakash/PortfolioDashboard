@@ -2,14 +2,16 @@ import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import {SearchBarComponent} from './search/search';
-import {Button} from './button/button';
 import {UserProfile} from './user-profile/user-profile';
 import {Logo} from './logo/logo';
+import {AlertButtonComponent} from './alert/alert';
+import {SettingsButtonComponent} from './settings/settings';
+import {ButtonComponent} from './button/button';
 
 @Component({
              selector: 'app-navbar',
              standalone: true,
-             imports: [CommonModule, RouterModule, SearchBarComponent, Button, UserProfile, Logo],
+             imports: [CommonModule, RouterModule, SearchBarComponent, ButtonComponent, UserProfile, Logo, AlertButtonComponent, Logo, SettingsButtonComponent],
              templateUrl: './navbar.html',
              styleUrls: ['./navbar.css'],
            })

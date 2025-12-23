@@ -1,0 +1,65 @@
+.glass-settings-btn {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 32px; /* Slightly squared for settings to distinguish from alerts */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow: hidden;
+  outline: none;
+}
+
+/* --- Global Hover Logic --- */
+.glass-settings-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(179, 136, 255, 0.5); /* Theme Purple Accent */
+  box-shadow: 0 5px 15px rgba(179, 136, 255, 0.2);
+}
+
+/* The Shine Sweep */
+.btn-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.glass-settings-btn:hover .btn-shine {
+  left: 100%;
+  transition: left 0.7s ease-in-out;
+}
+
+/* --- Icon Wrapper & Rotation --- */
+.icon-wrapper {
+  color: white;
+  font-size: 18px;
+  transition: transform 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-settings-btn:hover .icon-wrapper {
+  transform: rotate(90deg); /* Smoothly rotates the gear on hover */
+  color: #b388ff; /* Changes to theme purple */
+}
+
+/* Click Feel */
+.glass-settings-btn:active {
+  transform: scale(0.92);
+}

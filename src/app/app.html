@@ -1,4 +1,13 @@
-<app-navbar />
-<app-left-panel />
+<div style="display: flex; height: 100vh;">
+
+  <div class="page-container">
+    <app-navbar/>
+    <div class="content">
+      <app-left-panel/>
+      <app-main-content class="main-content"/>
+    </div>
+  </div>
+
+</div>
 
 <router-outlet />

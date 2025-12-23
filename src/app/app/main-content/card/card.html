@@ -1,0 +1,30 @@
+<div class="glass-card crypto-item">
+  <div class="card-shine"></div>
+
+  <div class="card-top">
+    <div class="coin-logo">
+      <i class="fa-brands fa-ethereum"></i>
+    </div>
+    <div class="coin-info">
+      <span class="symbol">{{ symbol }}</span>
+      <h3 class="name">{{ name }}</h3>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="balance-info">
+      <h2 class="amount">{{ amount }}</h2>
+      <p class="usd-value">{{ valueUsd }}</p>
+    </div>
+    <div class="trend-indicator" [class.positive]="isPositive">
+      <i class="fa-solid" [ngClass]="isPositive ? 'fa-arrow-trend-up' : 'fa-arrow-trend-down'"></i>
+      <span>{{ change }}</span>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <svg class="sparkline" viewBox="0 0 200 100" preserveAspectRatio="none">
+      <path [attr.d]="trendPath" fill="none" class="line-path" [style.stroke]="isPositive ? '#4caf50' : '#ff5252'" />
+    </svg>
+  </div>
+</div>

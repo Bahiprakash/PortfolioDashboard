@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
 }
 
 .navbar__logo {
@@ -97,4 +97,19 @@
   .navbar__toggle {
     display: block;
   }
+}
+
+.spacer{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-right-items{
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
 }

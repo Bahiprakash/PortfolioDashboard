@@ -1,46 +1,45 @@
 <nav class="navbar">
   <div class="navbar__container">
+
     <!-- Logo -->
     <div class="navbar__logo-container">
       <app-logo/>
     </div>
 
-    <app-user-profile
-      [imageUrl]="'https://i.pravatar.cc/150?u=a042581f4e29026704d'"
-      displayName="Alex Johnson"
-      handle="@alex_j"
-      [isPro]="true">
-    </app-user-profile>
+
+    <div class="navbar-right-items">
+      <!-- Desktop Links -->
+      <ul class="navbar__links">
+        <app-button label="Overview"></app-button>
+        <app-button label="Analytics"></app-button>
+      </ul>
 
 
-    <!-- Desktop Links -->
-    <ul class="navbar__links">
-      <li><a routerLink="/dashboard">Dashboard</a></li>
-      <li><a routerLink="/projects">Projects</a></li>
-    </ul>
+      <div class="spacer">
+        <!-- Alert Button -->
+        <app-alert iconClass="fa-solid fa-bell" [hasNotification]="true"/>
 
 
-    <!-- Alert Button -->
-    <app-nav-button label="2 New" leftIcon="fa-regular fa-bell"/>
+        <!-- Settings Button -->
+        <app-settings iconClass="fa-solid fa-gear fa-spin"></app-settings>
 
-    <!-- Search Bar -->
-    <div style="padding: 20px;">
-      <app-search-bar
-        placeholder="Search for notifications..."
-        (onSearch)="mySearchFunction($event)">
-      </app-search-bar>
+        <!-- Search Bar -->
+          <app-search-bar (onSearch)="mySearchFunction($event)"/>
+
+          <!-- user profile -->
+          <app-user-profile
+            [imageUrl]="'https://i.pravatar.cc/150?u=a042581f4e29026704d'"
+            displayName="Alex Johnson"
+            handle="@alex_j"
+            [isPro]="true">
+          </app-user-profile>
+      </div>
     </div>
-
-    <!-- Settings Button -->
-    <app-nav-button label="Settings" leftIcon="fa fa-cog fa-spin"/>
-
+    </div>
     <!-- Mobile Toggle -->
     <button class="navbar__toggle" (click)="toggleMenu()">
       ☰
     </button>
-
-  </div>
-
 
 
   <!-- Mobile Menu -->

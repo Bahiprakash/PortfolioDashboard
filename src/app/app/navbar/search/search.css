@@ -22,10 +22,10 @@
 
 .search-input {
   width: 100%;
-  padding: 10px 10px 10px 40px; /* Extra padding on left for icon */
+  padding: 10px 10px 8px 40px; /* Extra padding on left for icon */
   font-size: 16px;
   border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 32px;
   outline: none;
   transition: all 0.2s ease-in-out;
 }
@@ -46,7 +46,7 @@
   color: white;
   border: none;
   border-radius: 8px;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
