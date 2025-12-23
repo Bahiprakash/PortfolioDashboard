@@ -8,38 +8,43 @@
 
   <div class="card-grid">
 
-    <div class="card glass-card hero-card">
-      <div class="card-info">
-        <h3>Total Balance</h3>
-        <p class="balance">$42,394.00</p>
-      </div>
-      <div class="mini-chart">[Chart Placeholder]</div>
-    </div>
+    <app-hero-card class="card glass-card hero-card"/>
+
+    <app-crypto-card logoName="fa-brands fa-ethereum" name="Ethereum" symbol="ETH" amount="2.9383" [isPositive]="true" change="2.84%" trendPath="M5 70 Q 20 60, 40 75 T 70 65 T 100 75 T 130 50 T 160 10 T 195 5"/>
+
+    <app-crypto-card logoName="fa-brands fa-bell"  name="Sefron" symbol="ATS" amount="15.9383" [isPositive]="false" change="-0.04%" trendPath="M0 50 Q 25 10, 50 50 T 100 90 T 150 10 T 200 50"/>
 
     <app-crypto-card
-      name="Ethereum"
-      symbol="ETH"
-      amount="2.9383"
-      [isPositive]="false"
-      change="-0.84%">
-    </app-crypto-card>
-
-    <app-crypto-card
+      logoName="fa-brands fa-airbnb"
       name="Bitcoin"
       symbol="BTC"
       amount="0.4512"
       [isPositive]="true"
       change="+2.15%"
-      trendPath="M0 80 Q 30 20, 60 40 T 100 10 T 140 30 T 180 15 T 200 50">
+      trendPath="M5 90 Q 25 70, 55 80 T 95 40 T 135 50 T 175 15 T 195 10">
     </app-crypto-card>
 
     <app-promo-card/>
 
-    <div class="card glass-card wide-card">
-      <h4>Recent Transactions</h4>
-      <div class="transaction-list">
-      </div>
-    </div>
+    <app-crypto-card2
+      logoName="fa-brands fa-airbnb"
+      name="Bitcoin"
+      symbol="BTC"
+      amount="0.4512"
+      [isPositive]="true"
+      change="+2.15%"
+      trendPath="M5 90 Q 25 70, 55 80 T 95 40 T 135 50 T 175 15 T 195 10">
+    </app-crypto-card2>
+    <app-crypto-card2
+      logoName="fa-solid fa-arrow-up-from-bracket"
+      name="ASitcoin"
+      symbol="ATC"
+      amount="12.4512"
+      [isPositive]="true"
+      change="+12.15%"
+      trendPath="M5 90 Q 25 70, 55 80 T 95 40 T 135 50 T 175 15 T 195 10">
+    </app-crypto-card2>
 
+    <app-promo-card2 class="promo-card2"/>
   </div>
 </div>

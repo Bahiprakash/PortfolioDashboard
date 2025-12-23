@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-             selector: 'app-crypto-card',
+             selector: 'app-crypto-card2',
              standalone: true,
              imports: [CommonModule],
-             templateUrl: './card.html',
-             styleUrl: './card.css'
+             templateUrl: './card2.html',
+             styleUrl: './card2.css'
            })
-export class Card {
+export class Card2 {
   @Input() logoName: string = 'fa-brands fa-ethereum';
   @Input() name: string = 'Ethereum';
   @Input() symbol: string = 'ETH';

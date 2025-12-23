@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 24px;
   padding: 24px;
-  background: linear-gradient(180deg, rgba(94, 72, 0, 0.38) 0%, rgba(16, 10, 0, 0.04) 100%);
+  background: linear-gradient(180deg, rgba(0, 2, 147, 0.38) 0%, rgba(0, 1, 31, 0.38) 100%);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -18,9 +18,9 @@
 /* --- Global Hover Animation --- */
 .glass-card:hover {
   transform: translateY(-8px); /* Lift effect */
-  border-color: rgb(255, 183, 0); /* Purple glow border */
-  box-shadow: 0 15px 40px rgba(94, 72, 0, 0.4); /* Purple depth shadow */
-  background: linear-gradient(180deg, rgba(175, 133, 0, 0.4) 0%, rgba(12, 7, 0, 0.04) 100%);
+  border-color: rgb(81, 151, 255); /* Purple glow border */
+  box-shadow: 0 15px 40px rgba(0, 2, 147, 0.66); /* Purple depth shadow */
+  background: linear-gradient(180deg, rgba(1, 4, 215, 0.51) 0%, rgba(0, 0, 5, 0.38) 100%);
 }
 
 
@@ -52,7 +52,7 @@
 .card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
   padding: 16px;
   border-radius: 20px;
-  background: linear-gradient(180deg, rgba(180, 108, 0, 0.66) 0%, rgba(255, 255, 255, 0.04) 100%);
+  background: linear-gradient(180deg, rgba(56, 58, 252, 0.38) 0%, rgba(255, 255, 255, 0.04) 100%);
 }
 
 .coin-logo {
