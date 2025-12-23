@@ -1,0 +1,65 @@
+<nav class="navbar">
+  <div class="navbar__container">
+    <!-- Logo -->
+    <div class="navbar__logo-container">
+      <a routerLink="/" class="navbar__logo">
+        <span>BlockUI</span>
+      </a>
+    </div>
+
+
+    <!-- Desktop Links -->
+    <ul class="navbar__links">
+      <li><a routerLink="/dashboard">Dashboard</a></li>
+      <li><a routerLink="/projects">Projects</a></li>
+      <li><a routerLink="/pricing">Pricing</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+
+    <!-- CTA -->
+    <div class="navbar__actions">
+      <button class="btn-secondary">Login</button>
+      <button class="btn-primary">Get Started</button>
+    </div>
+
+    <!-- Alert Button -->
+    <app-nav-button label="2 New" leftIcon="fa-regular fa-bell"/>
+
+    <!-- Search Bar -->
+    <div style="padding: 20px;">
+      <app-search-bar
+        placeholder="Search products..."
+        [debounceTime]="500"
+        (searchChange)="onSearchChange($event)"
+        (search)="onSearch($event)"
+      ></app-search-bar>
+    </div>
+
+    <!-- Settings Button -->
+    <app-nav-button label="Settings" leftIcon="fa fa-cog fa-spin"/>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar__toggle" (click)="toggleMenu()">
+      ☰
+    </button>
+
+  </div>
+
+
+
+  <!-- Mobile Menu -->
+  @if (isMenuOpen()) {
+    <div class="navbar__mobile">
+      <a routerLink="/dashboard" (click)="closeMenu()">Dashboard</a>
+      <a routerLink="/projects" (click)="closeMenu()">Projects</a>
+      <a routerLink="/pricing" (click)="closeMenu()">Pricing</a>
+      <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+
+      <div class="mobile-actions">
+        <button class="btn-secondary">Login</button>
+        <button class="btn-primary">Get Started</button>
+      </div>
+    </div>
+  }
+</nav>
+
