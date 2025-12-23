@@ -1,5 +1,6 @@
 <div class="radio-container">
-  <div class="glass-slider" [class.slide-right]="selected === 'pool'"></div>
+  <div class="glass-slider" [class.slide-right]="selected === 'pool'">
+  </div>
 
   <div class="option" [class.active]="selected === 'wallet'" (click)="select('wallet')">
     <i class="fa-solid fa-wallet"></i>
@@ -10,4 +11,5 @@
     <i class="fa-solid fa-water-ladder"></i>
     <span>Pool</span>
   </div>
+
 </div>

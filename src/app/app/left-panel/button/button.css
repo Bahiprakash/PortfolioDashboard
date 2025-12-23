@@ -2,9 +2,10 @@
   position: relative;
   overflow: hidden; /* Clips the shimmer */
   min-width: 220px;
+  width: 100%;
   height: 48px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  border-radius: 32px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -30,9 +31,11 @@
   padding: 0 16px;
   color: white;
   z-index: 2; /* Sits above shimmer */
+  gap: 12px;
 }
 
 .btn-logo {
+  width: 20px;
   font-size: 18px;
   color: #b388ff; /* Purple accent matching your theme */
   flex-shrink: 0;
@@ -40,10 +43,10 @@
 
 .btn-label {
   flex-grow: 1;
-  text-align: center;
+  text-align: left;
   font-weight: 500;
-  letter-spacing: 0.5px;
-  font-size: 15px;
+  letter-spacing: 1px;
+  font-size: 16px;
 }
 
 .spacer {

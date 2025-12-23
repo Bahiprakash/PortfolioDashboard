@@ -9,7 +9,7 @@
   width: 100%;
   height: 48px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border-radius: 32px;
   background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
   backdrop-filter: blur(10px);
   color: white;
@@ -20,18 +20,57 @@
 
 .glass-btn:hover { background: rgba(255,255,255,0.15); }
 
+/* Shimmer Animation */
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.glass-btn:hover .shimmer {
+  left: 150%;
+  transition: left 0.7s ease-in-out;
+}
+
 .content-wrapper {
   display: flex;
   align-items: center;
   padding: 0 16px;
   height: 100%;
+  justify-content: space-between;
 }
 
-.btn-logo { width: 20px; color: #b388ff; }
-.btn-label { flex-grow: 1; text-align: left; margin-left: 12px; font-size: 14px; }
+
+
+.btn-logo {
+  width: 20px;
+  color: #b388ff;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+
+.btn-label {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
 
 .arrow {
-  font-size: 12px;
+  font-size: 14px;
   transition: transform 0.3s ease;
 }
 
@@ -68,13 +107,14 @@
   gap: 12px;
   padding: 10px 15px;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 13px;
+  font-size: 16px;
   border-radius: 8px;
   transition: background 0.2s;
 }
 
 .sub-item:hover {
   background: rgba(255, 255, 255, 0.05);
+  border-radius: 32px;
   color: white;
 }
 

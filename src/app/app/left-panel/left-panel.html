@@ -29,12 +29,8 @@
         [class.mini]="isCollapsed()">
       </app-glass-button>
     </div>
-
-    <div class="nav-section bottom">
-      <app-glass-button
-        [label]="isCollapsed() ? '' : 'Settings'"
-        iconClass="fa-solid fa-gear"
-        [class.mini]="isCollapsed()"/>
+    <span class="spacer"></span>
+    <div class="nav-section-bottom">
       <app-glass-radio (selectedChange)="onToggleChange($event)"/>
       <app-cookie-card [isSidebarCollapsed]="isCollapsed()"></app-cookie-card>
     </div>

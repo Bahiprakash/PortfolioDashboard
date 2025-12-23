@@ -1,5 +1,9 @@
 <div class="dropdown-container" [class.expanded]="isOpen() && !isSidebarCollapsed">
+
   <button class="glass-btn" (click)="toggleDropdown()" [class.active]="isOpen()">
+
+    <div class="shimmer"></div>
+
     <div class="content-wrapper">
       <i [class]="iconClass" class="btn-logo"></i>
       @if (!isSidebarCollapsed) {
