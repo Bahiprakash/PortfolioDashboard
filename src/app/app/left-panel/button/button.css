@@ -1,0 +1,91 @@
+.glass-btn {
+  position: relative;
+  overflow: hidden; /* Clips the shimmer */
+  min-width: 220px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
+  outline: none;
+
+  /* Glass Gradient: Fades from 40% white to 5% white (Left to Right) */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+
+  /* The Glass Blur */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0 16px;
+  color: white;
+  z-index: 2; /* Sits above shimmer */
+}
+
+.btn-logo {
+  font-size: 18px;
+  color: #b388ff; /* Purple accent matching your theme */
+  flex-shrink: 0;
+}
+
+.btn-label {
+  flex-grow: 1;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+}
+
+.spacer {
+  width: 18px; /* Matches logo width to ensure center text alignment */
+}
+
+/* --- Hover Effects --- */
+
+.glass-btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
+/* Shimmer Animation */
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.glass-btn:hover .shimmer {
+  left: 150%;
+  transition: left 0.7s ease-in-out;
+}
+
+/* Click Animation */
+.glass-btn:active {
+  transform: scale(0.97);
+}

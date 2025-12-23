@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-button',
+  selector: 'app-glass-button',
   imports: [CommonModule],
   templateUrl: './button.html',
   styleUrl: './button.css',

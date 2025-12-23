@@ -1,1 +1,43 @@
-<p>left-panel works!</p>
+<aside class="sidebar" [class.collapsed]="isCollapsed()">
+  <button class="toggle-btn" (click)="toggleSidebar()">
+    <i class="fa-solid" [ngClass]="isCollapsed() ? 'fa-chevron-right' : 'fa-chevron-left'"></i>
+  </button>
+
+  <div class="sidebar-content">
+    <div class="nav-section">
+      <app-glass-button
+        [label]="isCollapsed() ? '' : 'Dashboard'"
+        iconClass="fa-solid fa-house"
+        [class.mini]="isCollapsed()">
+      </app-glass-button>
+
+      <app-glass-dropdown
+        label="Trading"
+        iconClass="fa-solid fa-chart-pie"
+        [isSidebarCollapsed]="isCollapsed()">
+      </app-glass-dropdown>
+
+      <app-glass-button
+        [label]="isCollapsed() ? '' : 'Market'"
+        iconClass="fa-solid fa-chart-line"
+        [class.mini]="isCollapsed()">
+      </app-glass-button>
+
+      <app-glass-button
+        [label]="isCollapsed() ? '' : 'Wallet'"
+        iconClass="fa-solid fa-wallet"
+        [class.mini]="isCollapsed()">
+      </app-glass-button>
+    </div>
+
+    <div class="nav-section bottom">
+      <app-glass-button
+        [label]="isCollapsed() ? '' : 'Settings'"
+        iconClass="fa-solid fa-gear"
+        [class.mini]="isCollapsed()"/>
+      <app-glass-radio (selectedChange)="onToggleChange($event)"/>
+      <app-cookie-card [isSidebarCollapsed]="isCollapsed()"></app-cookie-card>
+    </div>
+
+  </div>
+</aside>

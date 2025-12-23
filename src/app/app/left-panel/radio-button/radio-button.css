@@ -1,0 +1,72 @@
+.radio-container {
+  position: relative;
+  display: flex;
+  width: 240px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.05); /* Very dim glass base */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 2; /* Sits above the slider */
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.option.active {
+  color: #ffffff;
+}
+
+.option i {
+  font-size: 14px;
+}
+
+/* The Sliding Glass Element */
+.glass-slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  border-radius: 10px;
+
+  /* Glass Gradient effect (matching your fading style) */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* Sliding Animation */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.glass-slider.slide-right {
+  transform: translateX(100%);
+}
+
+/* Hover Effect on the whole container */
+.radio-container:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Active Click Scale */
+.radio-container:active .glass-slider {
+  transform: translateX(0) scale(0.95);
+}
+.radio-container:active .glass-slider.slide-right {
+  transform: translateX(100%) scale(0.95);
+}

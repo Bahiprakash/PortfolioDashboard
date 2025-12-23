@@ -1,0 +1,24 @@
+<div class="dropdown-container" [class.expanded]="isOpen() && !isSidebarCollapsed">
+  <button class="glass-btn" (click)="toggleDropdown()" [class.active]="isOpen()">
+    <div class="content-wrapper">
+      <i [class]="iconClass" class="btn-logo"></i>
+      @if (!isSidebarCollapsed) {
+        <span class="btn-label">{{ label }}</span>
+        <i class="fa-solid fa-chevron-down arrow" [class.rotate]="isOpen()"></i>
+      }
+    </div>
+  </button>
+
+  <div class="sub-menu" [class.show]="isOpen() && !isSidebarCollapsed">
+    <div class="sub-menu-inner">
+      <div class="sub-item">
+        <i class="fa-solid fa-circle-dot"></i>
+        <span>Option 1</span>
+      </div>
+      <div class="sub-item">
+        <i class="fa-solid fa-circle-dot"></i>
+        <span>Option 2</span>
+      </div>
+    </div>
+  </div>
+</div>
