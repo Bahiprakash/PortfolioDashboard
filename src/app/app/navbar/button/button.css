@@ -1,7 +1,7 @@
 .glass-nav-btn {
   position: relative;
   padding: 12px 20px;
-  border-radius: 32px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
   backdrop-filter: blur(12px);
@@ -17,8 +17,8 @@
 /* --- Hover States --- */
 .glass-nav-btn:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(179, 136, 255, 0.5); /* Theme Purple accent */
+  background: linear-gradient(180deg, rgba(0, 187, 229, 0.74) 0%, rgb(0, 46, 75) 100%);
+  border-color: rgba(0, 187, 229, 0.74); /* Theme accent */
   box-shadow: 0 4px 20px rgba(179, 136, 255, 0.2);
 }
 
@@ -51,10 +51,12 @@
   letter-spacing: 1px;
   transition: all 0.3s ease;
   z-index: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .glass-nav-btn:hover .btn-text {
-  color: #b388ff; /* Subtle color shift to purple on hover */
+  color: #ffeeee; /* Subtle color shift to purple on hover */
 }
 
 /* Click Animation */

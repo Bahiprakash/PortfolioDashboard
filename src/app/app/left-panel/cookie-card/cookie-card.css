@@ -91,6 +91,11 @@ button {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
 }
 
+.btn-deny:hover {
+  background: linear-gradient(180deg, rgb(0, 209, 255) 0%, rgb(0, 46, 75) 100%);
+  border-color: rgba(0, 187, 229, 0.74); /* Theme accent */
+}
+
 .btn-accept {
   background: linear-gradient(90deg, #4caf50, #8bc34a); /* Green gradient */
   color: white;

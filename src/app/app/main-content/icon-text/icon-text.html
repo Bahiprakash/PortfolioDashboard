@@ -1,0 +1,11 @@
+<button class="btn-gradient">
+  @if (iconClass) {
+    <span class="icon-container">
+      <i [class]="iconClass"></i>
+    </span>
+  }
+
+  <span class="label">
+    <ng-content></ng-content>
+  </span>
+</button>

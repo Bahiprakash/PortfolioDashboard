@@ -1,0 +1,27 @@
+.btn-gradient {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* Radial Gradient for depth */
+  background: radial-gradient(circle at center, #4f46e5 0%, #3730a3 100%);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-gradient:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  background: radial-gradient(circle at center, #6366f1 0%, #4338ca 100%);
+}
+
+.icon-container {
+  display: flex;
+  font-size: 1.25rem;
+}
