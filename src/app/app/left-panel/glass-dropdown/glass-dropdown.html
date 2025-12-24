@@ -5,10 +5,15 @@
     <div class="shimmer"></div>
 
     <div class="content-wrapper">
-      <i [class]="iconClass" class="btn-logo"></i>
+      @if (showIcon){
+      <i [class]="iconClass" class="btn-logo" [style.color]="iconColor"></i>
+      }
+
       @if (!isSidebarCollapsed) {
         <span class="btn-label">{{ label }}</span>
-        <i class="fa-solid fa-chevron-down arrow" [class.rotate]="isOpen()"></i>
+        @if(showArrow){
+          <i class="fa-solid fa-chevron-down arrow" [class.rotate]="isOpen()"></i>
+        }
       }
     </div>
   </button>

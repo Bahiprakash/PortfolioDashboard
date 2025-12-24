@@ -36,11 +36,12 @@
   height: 100%;
   padding: 10px;
   overflow-y: auto; /* Allow scrolling if many items expand */
+  justify-content: space-between;
 }
 
 
 .bottom-section {
-  margin-top: auto; /* Pushes the Cookie Card to the bottom */
+  margin-top: auto; /* Pushes the Cookie Card2 to the bottom */
   padding-top: 20px;
 }
 .spacer {

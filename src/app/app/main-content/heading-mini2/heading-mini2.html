@@ -1,0 +1,20 @@
+
+ <header class="header-container">
+    <div class="top-bar">
+    <span class="icon-label-group">
+      <i class="fa-solid fa-clock"></i> <span class="small-label">Based on recent 24 hours</span>
+    </span>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="title-with-button">
+      <h2 class="title">My Top Coins</h2>
+      <app-glass-dropdown  [canDropdownBeOpen]="false" label="3 Assets" [showIcon]="false" [showArrow]="false"/>
+      </div>
+      <div class="actions-group">
+        <app-glass-dropdown  [canDropdownBeOpen]="false" label="All Currencies" [showIcon]="false" />
+        <app-glass-dropdown  [canDropdownBeOpen]="false" label="24h" [showIcon]="false"/>
+        <app-glass-dropdown  [canDropdownBeOpen]="false" label="Add to watchlist" [showIcon]="true" [showArrow]="false" iconClass="fa-solid fa-star" iconColor="#0049FFFF"/>
+      </div>
+    </div>
+  </header>

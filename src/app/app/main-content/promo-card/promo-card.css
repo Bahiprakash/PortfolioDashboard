@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 380px;
   padding: 40px 30px;
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(0, 129, 157, 0.38) 0%, rgba(255, 255, 255, 0.04) 100%);
@@ -15,7 +14,7 @@
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   cursor: pointer;
   font-family: 'Inter', sans-serif;
-  height: 470px;
+  height: 400px;
 }
 
 /* --- Global Hover State --- */
@@ -75,21 +74,27 @@
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
+.content-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .promo-title {
   color: white;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 400;
   margin-bottom: 15px;
   line-height: 1.3;
 }
 
 .promo-desc {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 30px;
   max-width: 280px;
+  text-align: center;
+  justify-content: center;
 }
 
 /* CTA Button */

@@ -1,8 +1,12 @@
-.page-container{
+
+main {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  width: 100vw;
-  height: 1080px;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
 .content{
   display: flex;
@@ -11,7 +15,6 @@
   height: 100%;
   flex: 1;
 }
-
 .main-content{
   flex: 1;
 }

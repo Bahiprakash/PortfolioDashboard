@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import {IconText} from '../icon-text/icon-text';
+import {GlassDropdownComponent} from '../../left-panel/glass-dropdown/glass-dropdown';
+import {AlertButtonComponent} from '../../navbar/alert/alert';
 
 @Component({
-  selector: 'app-heading-mini',
-  imports: [IconText],
-  templateUrl: './heading-mini.html',
-  styleUrl: './heading-mini.css',
-})
+             selector: 'app-heading-mini',
+             templateUrl: './heading-mini.html',
+             styleUrl: './heading-mini.css',
+             imports: [
+               GlassDropdownComponent,
+               AlertButtonComponent
+             ]
+           })
 export class HeadingMini {
 
 }

@@ -10,18 +10,9 @@
       <h2 class="title">My Balance</h2>
 
       <div class="actions-group">
-        <button class="btn-action dropdown">
-          <span>24h</span>
-          <i class="icon-chevron-down"></i>
-        </button>
-
-        <button class="btn-action icon-only">
-          <i class="icon-eye-off"></i>
-        </button>
-
-        <button class="btn-action icon-only">
-          <i class="icon-refresh"></i>
-        </button>
+          <app-glass-dropdown  [canDropdownBeOpen]="false" label="24h" [showIcon]="false"/>
+          <app-alert iconClass="fa-regular fa-eye-slash" [hasNotification]="false"/>
+          <app-alert iconClass="fa-solid fa-rotate" [hasNotification]="false"/>
       </div>
     </div>
   </header>

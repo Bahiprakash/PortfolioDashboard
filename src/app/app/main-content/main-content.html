@@ -1,50 +1,52 @@
 <div class="dashboard-content">
-  <header class="content-header">
-    <app-heading-mini />
-    <div class="filter-actions">
-      <app-glass-radio/>
-    </div>
-  </header>
 
   <div class="card-grid">
 
-    <app-hero-card class="card glass-card hero-card"/>
+    <div class="first-line">
+      <div class="card-header-first-line">
+        <app-heading-mini/>
+        <app-hero-card class="glass-card"/>
+      </div>
 
-    <app-crypto-card logoName="fa-brands fa-ethereum" name="Ethereum" symbol="ETH" amount="2.9383" [isPositive]="true" change="2.84%" trendPath="M5 70 Q 20 60, 40 75 T 70 65 T 100 75 T 130 50 T 160 10 T 195 5"/>
+      <div class="card-header-first-line-2">
+        <app-heading-mini2/>
+        <div class="crypto-card-container">
+          <app-crypto-card class="crypto-card" logoName="fa-brands fa-ethereum" name="Ethereum" symbol="ETH" amount="2.9383" [isPositive]="true" change="2.84%" trendPath="M5 70 Q 20 60, 40 75 T 70 65 T 100 75 T 130 50 T 160 10 T 195 5"/>
+          <app-crypto-card2 class="crypto-card" logoName="fa-brands fa-bell"  name="Sefron" symbol="ATS" amount="15.9383" [isPositive]="false" change="-0.04%" trendPath="M0 50 Q 25 10, 50 50 T 100 90 T 150 10 T 200 50"/>
 
-    <app-crypto-card logoName="fa-brands fa-bell"  name="Sefron" symbol="ATS" amount="15.9383" [isPositive]="false" change="-0.04%" trendPath="M0 50 Q 25 10, 50 50 T 100 90 T 150 10 T 200 50"/>
+          <app-crypto-card3
+            class="crypto-card"
+            logoName="fa-brands fa-airbnb"
+            name="Bitcoin"
+            symbol="BTC"
+            amount="0.4512"
+            [isPositive]="true"
+            change="+2.15%"
+            trendPath="M5 90 Q 25 70, 55 80 T 95 40 T 135 50 T 175 15 T 195 10">
+          </app-crypto-card3>
 
-    <app-crypto-card
-      logoName="fa-brands fa-airbnb"
-      name="Bitcoin"
-      symbol="BTC"
-      amount="0.4512"
-      [isPositive]="true"
-      change="+2.15%"
-      trendPath="M5 90 Q 25 70, 55 80 T 95 40 T 135 50 T 175 15 T 195 10">
-    </app-crypto-card>
 
-    <app-promo-card/>
+        </div>
 
-    <app-crypto-card2
-      logoName="fa-brands fa-airbnb"
-      name="Bitcoin"
-      symbol="BTC"
-      amount="0.4512"
-      [isPositive]="true"
-      change="+2.15%"
-      trendPath="M5 90 Q 25 70, 55 80 T 95 40 T 135 50 T 175 15 T 195 10">
-    </app-crypto-card2>
-    <app-crypto-card2
-      logoName="fa-solid fa-arrow-up-from-bracket"
-      name="ASitcoin"
-      symbol="ATC"
-      amount="12.4512"
-      [isPositive]="true"
-      change="+12.15%"
-      trendPath="M5 90 Q 25 70, 55 80 T 95 40 T 135 50 T 175 15 T 195 10">
-    </app-crypto-card2>
+      </div>
+    </div>
 
-    <app-promo-card2 class="promo-card2"/>
+    <hr class="horizontal-divider">
+
+    <div class="second-line card-header-second-line-combined">
+      <div class="card-header-second-line">
+        <div class="card-header-first-line">
+          <app-heading-mini/>
+          <app-hero-card class="glass-card"/>
+        </div>
+        <div class="card-header-first-line">
+          <app-heading-mini/>
+          <app-hero-card class="glass-card"/>
+        </div>
+      </div>
+
+      <app-promo-card/>
+    </div>
+
   </div>
 </div>

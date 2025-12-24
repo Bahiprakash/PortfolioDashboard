@@ -17,4 +17,5 @@ export class Card2 {
   @Input() change: string = '-0.84%';
   @Input() isPositive: boolean = false;
   @Input() trendPath: string = "M5 90 Q 25 70, 55 80 T 95 40 T 135 50 T 175 15 T 195 10";
+
 }

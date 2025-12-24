@@ -2,7 +2,7 @@
   position: relative;
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15); /* Edge shine */
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
   backdrop-filter: blur(10px);
