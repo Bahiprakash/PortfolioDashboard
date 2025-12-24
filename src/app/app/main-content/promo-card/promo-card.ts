@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
            })
 export class PromoCardComponent {
   @Input() title: string = "Unlimited Access to Trading AI Bots!";
-  @Input() description: string = 'In the beta version, you have access to staking, smart swap and new features.';
+  @Input() description: string = 'In the beta version, you have access to staking, smart swap and new features. Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
 }

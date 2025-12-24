@@ -69,6 +69,10 @@
   gap: 10px;
   flex:1
 }
+.promo-card{
+  height: 100%;
+  width: 100%;
+}
 
 /* Glass Card2 Base Style (Top-to-bottom effect) */
 .glass-card {
@@ -154,4 +158,9 @@ grid-column: span 2;
   padding: 20px 32px;
   border-radius: 24px;
   gap: 32px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex:1
 }
