@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 @Component({
              selector: 'app-crypto-card',
              standalone: true,
-             imports: [CommonModule],
+             imports: [CommonModule, NgOptimizedImage],
              templateUrl: './card.html',
              styleUrl: './card.css'
            })

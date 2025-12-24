@@ -1,6 +1,6 @@
 <div class="glass-card ">
   <div class="card-shine"></div>
-
+  <img ngSrc="/Graph3.png" class="card-bg-image" alt="graph" height="350" width="350"/>
   <div class="card-top">
     <div class="coin-logo">
       <i [class]="logoName"></i>
@@ -22,17 +22,17 @@
     </div>
   </div>
 
-  <div class="card-footer">
-    <svg class="sparkline" viewBox="0 0 200 100" preserveAspectRatio="none">
-      <defs>
-        <pattern id="grid" width="40" height="20" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 20" fill="none" stroke="rgba(8,255,169,0.5)" stroke-width="0.5"/>
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#grid)" />
+<!--  <div class="card-footer">-->
+<!--    <svg class="sparkline" viewBox="0 0 200 100" preserveAspectRatio="none">-->
+<!--      <defs>-->
+<!--        <pattern id="grid" width="40" height="20" patternUnits="userSpaceOnUse">-->
+<!--          <path d="M 40 0 L 0 0 0 20" fill="none" stroke="rgba(8,255,169,0.5)" stroke-width="0.5"/>-->
+<!--        </pattern>-->
+<!--      </defs>-->
+<!--      <rect width="100%" height="100%" fill="url(#grid)" />-->
 
-      <line x1="0" y1="98" x2="200" y2="98" class="axis-line" /> <line x1="2" y1="0" x2="2" y2="100" class="axis-line" />
-      <path [attr.d]="trendPath" fill="none" class="line-path" [style.stroke]="isPositive ? '#4caf50' : '#ff5252'" />
-    </svg>
-  </div>
+<!--      <line x1="0" y1="98" x2="200" y2="98" class="axis-line" /> <line x1="2" y1="0" x2="2" y2="100" class="axis-line" />-->
+<!--      <path [attr.d]="trendPath" fill="none" class="line-path" [style.stroke]="isPositive ? '#4caf50' : '#ff5252'" />-->
+<!--    </svg>-->
+<!--  </div>-->
 </div>
