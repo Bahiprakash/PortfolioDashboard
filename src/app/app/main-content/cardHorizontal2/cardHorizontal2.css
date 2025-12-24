@@ -6,7 +6,7 @@
 
 .glass-card {
   border-radius: 24px;
-  background: radial-gradient(circle 250px at top center, rgba(248, 168, 0, 0.28), rgba(9, 4, 0, 0.63));
+  background: radial-gradient(circle 250px at top center, rgba(0, 166, 255, 0.45), rgba(0, 0, 5, 0.65));
   backdrop-filter: blur(16px);
   border: 1px solid rgba(239, 164, 69, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -29,9 +29,9 @@
 /* --- Global Hover Animation --- */
 .glass-card:hover {
   transform: translateY(-8px); /* Lift effect */
-  border-color: rgb(255, 183, 0); /* Purple glow border */
-  box-shadow: 0 15px 40px rgba(94, 72, 0, 0.4); /* Purple depth shadow */
-  background: radial-gradient(circle 250px at top center, rgba(248, 168, 0, 0.81), rgba(9, 4, 0, 0.63));
+  border-color: rgba(0, 166, 255, 0.88); /* Purple glow border */
+  box-shadow: 0 15px 40px rgba(0, 187, 255, 0.25); /* Purple depth shadow */
+  background: radial-gradient(circle 250px at top center, rgba(0, 187, 255, 0.65), rgba(255, 255, 255, 0.02));
   overflow: hidden;
 }
 
@@ -101,7 +101,7 @@
 }
 .coin-logo {
   width: 64px; height: 64px;
-  background: rgb(215, 155, 46);
+  background: rgb(24, 123, 222);
   border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
   color: #ffffff;
