@@ -112,7 +112,7 @@
 
 .trend-indicator {
   display: flex; align-items: center; gap: 6px;
-  padding: 16px 10px; border-radius: 12px; font-size: 12px;
+  padding: 16px 10px; border-radius: 12px; font-size: 18px;
   background: rgba(255, 82, 82, 0.1); color: #ff5252;
 }
 

@@ -4,10 +4,11 @@ import {PromoCardComponent} from './promo-card/promo-card';
 import {HeroCard} from './hero-card/hero-card';
 import {HeadingMini} from './heading-mini/heading-mini';
 import {HeadingMini2} from './heading-mini2/heading-mini2';
-import {Card2} from './card2/card2';
-import {Card3} from './card3/card3';
 import {Card4} from './card4/card4';
 import {Card5} from './card5/card5';
+import {HeadingMini3} from './heading-mini3/heading-mini3';
+import {HeadingMini4} from './heading-mini4/heading-mini4';
+import {HeroCard2} from './hero-card2/hero-card2';
 
 @Component({
   selector: 'app-main-content',
@@ -17,10 +18,12 @@ import {Card5} from './card5/card5';
                HeroCard,
                HeadingMini,
                HeadingMini2,
-               Card2,
-               Card3,
                Card4,
-               Card5
+               Card5,
+               HeadingMini3,
+               HeadingMini4,
+               HeadingMini3,
+               HeroCard2
              ],
   templateUrl: './main-content.html',
   styleUrl: './main-content.css',
