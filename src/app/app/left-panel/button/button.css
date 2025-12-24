@@ -1,18 +1,18 @@
 .glass-btn {
   position: relative;
   overflow: hidden; /* Clips the shimmer */
-  min-width: 220px;
+  min-width: 13.75rem; /* 220px */
   width: 100%;
-  height: 48px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
+  height: 3rem; /* 48px */
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2); /* 1px */
+  border-radius: 1rem; /* 16px */
   cursor: pointer;
   display: flex;
   align-items: center;
   transition: all 0.4s ease;
   outline: none;
 
-  /* Glass Gradient: Fades from 40% white to 5% white (Left to Right) */
+  /* Glass Gradient: Fades from 15% white to 2% white (Left to Right) */
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.15) 0%,
@@ -20,24 +20,24 @@
   );
 
   /* The Glass Blur */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(0.75rem); /* 12px */
+  -webkit-backdrop-filter: blur(0.75rem);
 }
 
 .content-wrapper {
   display: flex;
   width: 100%;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 1rem; /* 16px */
   color: white;
   z-index: 2; /* Sits above shimmer */
-  gap: 12px;
+  gap: 0.75rem; /* 12px */
 }
 
 .btn-logo {
-  width: 20px;
-  font-size: 18px;
-  color: white; /* Purple accent matching your theme */
+  width: 1.25rem; /* 20px */
+  font-size: 1.125rem; /* 18px */
+  color: white;
   flex-shrink: 0;
 }
 
@@ -45,20 +45,20 @@
   flex-grow: 1;
   text-align: left;
   font-weight: 500;
-  letter-spacing: 1px;
-  font-size: 16px;
+  letter-spacing: 0.0625rem; /* 1px */
+  font-size: 1rem; /* 16px */
 }
 
 .spacer {
-  width: 18px; /* Matches logo width to ensure center text alignment */
+  width: 1.125rem; /* 18px - Matches logo font-size */
 }
 
 /* --- Hover Effects --- */
 
 .glass-btn:hover {
   border-color: rgba(0, 187, 229, 0.74);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.125rem); /* 2px */
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3); /* 10px 20px */
   background: linear-gradient(
     90deg,
     rgba(0, 187, 229, 0.76) 0%,

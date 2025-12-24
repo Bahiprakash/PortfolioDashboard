@@ -1,11 +1,11 @@
 .glass-settings-btn {
   position: relative;
-  width: 42px;
-  height: 42px;
-  border-radius: 16px; /* Slightly squared for settings to distinguish from alerts */
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 2.625rem;  /* 42px */
+  height: 2.625rem; /* 42px */
+  border-radius: 1rem; /* 16px */
+  border: 0.0625rem solid rgba(255, 255, 255, 0.15); /* 1px */
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 100%);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(0.75rem); /* 12px */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -17,10 +17,10 @@
 
 /* --- Global Hover Logic --- */
 .glass-settings-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem); /* -2px */
   background: linear-gradient(180deg, rgba(0, 187, 229, 0.74) 0%, rgb(0, 46, 75) 100%);
   border-color: rgba(0, 187, 229, 0.74); /* Theme accent */
-  box-shadow: 0 5px 15px rgba(179, 136, 255, 0.2);
+  box-shadow: 0 0.3125rem 0.9375rem rgba(179, 136, 255, 0.2); /* 5px 15px */
 }
 
 /* The Shine Sweep */
@@ -47,7 +47,7 @@
 /* --- Icon Wrapper & Rotation --- */
 .icon-wrapper {
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   transition: transform 0.6s ease;
   display: flex;
   align-items: center;
@@ -56,7 +56,6 @@
 
 .glass-settings-btn:hover .icon-wrapper {
   transform: rotate(90deg); /* Smoothly rotates the gear on hover */
-
 }
 
 /* Click Feel */

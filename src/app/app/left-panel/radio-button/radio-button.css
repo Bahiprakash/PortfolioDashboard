@@ -2,10 +2,10 @@
   position: relative;
   display: flex;
   width: 100%;
-  height: 48px;
-  background: rgba(255, 255, 255, 0.05); /* Very dim glass base */
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 3rem; /* 48px */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem; /* 16px */
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1); /* 1px */
 
   cursor: pointer;
   user-select: none;
@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  z-index: 2; /* Sits above the slider */
+  z-index: 2;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 500;
   transition: color 0.3s ease;
@@ -28,45 +28,40 @@
 
 .option.active {
   color: #ffffff;
-  align-items: center;
-  justify-content: center;
 }
 
 .option i {
-  font-size: 14px;
-  align-items: center;
-  justify-content: center;
+  font-size: 0.875rem; /* 14px */
 }
 
 /* The Sliding Glass Element */
 .glass-slider {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: calc(50% - 5px);
-  height: calc(100% - 8px);
-  border-radius: 12px;
+  /* Proportional spacing using rem */
+  top: 0.1875rem;  /* 3px */
+  left: 0.1875rem; /* 3px */
+  width: calc(50% - 0.3125rem); /* 5px offset */
+  height: calc(100% - 0.5rem);   /* 8px offset */
+
+  border-radius: 0.75rem; /* 12px */
   border-color: rgba(0, 187, 229, 0.74);
-  /* Glass Gradient effect (matching your fading style) */
+
   background: linear-gradient(
     90deg,
     rgba(0, 208, 255, 0.89) 0%,
     rgb(0, 82, 189) 100%
   );
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0.625rem); /* 10px */
 
-  /* Sliding Animation */
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-
-
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3); /* 10px 20px */
 }
 
 .glass-slider.slide-right {
+  /* No change needed for translateX(100%) as it is percentage based */
   transform: translateX(100%);
 }
 
-/* Hover Effect on the whole container */
 .radio-container:hover {
   border-color: rgba(255, 255, 255, 0.2);
 }
@@ -75,6 +70,7 @@
 .radio-container:active .glass-slider {
   transform: translateX(0) scale(0.95);
 }
+
 .radio-container:active .glass-slider.slide-right {
   transform: translateX(100%) scale(0.95);
 }

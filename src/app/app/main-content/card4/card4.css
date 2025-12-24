@@ -6,19 +6,20 @@
 
 .glass-card {
   position: relative;
-  border-radius: 24px;
-  padding: 24px;
-  background: radial-gradient(circle 250px at top center, rgba(0, 166, 255, 0.45), rgba(255, 255, 255, 0.02));
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 131, 201, 0.43);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 1.5rem; /* 24px */
+  padding: 1.5rem; /* 24px */
+  /* Gradient radius: 250px = 15.625rem */
+  background: radial-gradient(circle 15.625rem at top center, rgba(0, 166, 255, 0.45), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(1rem); /* 16px */
+  border: 0.0625rem solid rgba(0, 131, 201, 0.43); /* 1px */
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3); /* 8px 32px */
   overflow: hidden;
   color: white;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
-  height: 300px;
-  width: 250px;
-  /* Shared UI Transition */
+  height: 18.75rem; /* 300px */
+  width: 15.625rem;  /* 250px */
+
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   gap: 1rem;
   justify-content: start;
@@ -29,33 +30,10 @@
 
 /* --- Global Hover Animation --- */
 .glass-card:hover {
-  transform: translateY(-8px); /* Lift effect */
-  border-color: rgba(0, 166, 255, 0.88); /* Purple glow border */
-  box-shadow: 0 15px 40px rgba(0, 187, 255, 0.25); /* Purple depth shadow */
-  background: radial-gradient(circle 250px at top center, rgba(0, 187, 255, 0.65), rgba(255, 255, 255, 0.02));
-  overflow: hidden;
-}
-
-.glass-card:hover .card-bg-image {
-  opacity: 1;
-}
-
-/* Internal Spotlight Shine */
-@keyframes shine-sweep {
-  0% {
-    transform: translateX(-150%) skewX(-25deg);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1; /* Fade in quickly at the start */
-  }
-  80% {
-    opacity: 1; /* Stay visible while crossing the card */
-  }
-  100% {
-    transform: translateX(250%) skewX(-25deg);
-    opacity: 0; /* Fade out completely before stopping */
-  }
+  transform: translateY(-0.5rem); /* 8px */
+  border-color: rgba(0, 166, 255, 0.88);
+  box-shadow: 0 0.9375rem 2.5rem rgba(0, 187, 255, 0.25); /* 15px 40px */
+  background: radial-gradient(circle 15.625rem at top center, rgba(0, 187, 255, 0.65), rgba(255, 255, 255, 0.02));
 }
 
 .card-shine {
@@ -70,29 +48,25 @@
     rgba(255, 255, 255, 0.2),
     transparent
   );
-  opacity: 0; /* Hidden by default */
+  opacity: 0;
   pointer-events: none;
 }
 
-/* Trigger Animation on Hover */
 .glass-card:hover .card-shine {
   animation: shine-sweep 0.8s ease-in-out forwards;
 }
 
-.coin-info{
+.coin-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 4px;
+  gap: 0.25rem; /* 4px */
 }
 
-.symbol{
-  color: #be9b9b;
-}
-.name{
+.name {
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem; /* 1px */
 }
 
 /* Standard Content Styles */
@@ -100,81 +74,96 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-  border-radius: 20px;
+  gap: 0.75rem; /* 12px */
+  margin-bottom: 1.5rem; /* 24px */
+  border-radius: 1.25rem; /* 20px */
   width: 100%;
   justify-content: center;
 }
-.card-body{
+
+.card-body {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   justify-content: center;
-  gap: 24px;
-}
-.coin-logo {
-  width: 44px; height: 44px;
-  background: rgb(73, 151, 255);
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  color: #ffffff;
+  gap: 1.5rem; /* 24px */
 }
 
-.amount { font-size: 32px; font-weight: 400; margin: 0; }
-.usd-value { opacity: 0.6; font-size: 16px; }
+.coin-logo {
+  width: 2.75rem;  /* 44px */
+  height: 2.75rem; /* 44px */
+  background: rgb(73, 151, 255);
+  border-radius: 0.75rem; /* 12px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amount {
+  font-size: 2rem; /* 32px */
+  font-weight: 400;
+  margin: 0;
+}
+
+.usd-value {
+  opacity: 0.6;
+  font-size: 1rem; /* 16px */
+}
 
 .trend-indicator {
-  display: flex; align-items: center; gap: 6px;
-  padding: 16px 10px; border-radius: 12px; font-size: 18px;
-  background: rgba(255, 82, 82, 0.1); color: #ff5252;
-
+  display: flex;
+  align-items: center;
+  gap: 0.375rem; /* 6px */
+  padding: 1rem 0.625rem; /* 16px 10px */
+  border-radius: 0.75rem; /* 12px */
+  font-size: 1.125rem; /* 18px */
+  background: rgba(255, 82, 82, 0.1);
+  color: #ff5252;
 }
 
 .trend-indicator.positive {
   background: rgba(76, 175, 80, 0);
   color: #00e0e0;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
 }
 
-.card-footer { width: 100% ; height: 100%; justify-content: center; overflow: visible; align-content: center; }
-.sparkline { width: 100%; height: 100%; opacity: 0.7; justify-content: center; overflow: visible; align-content: center;}
-.line-path { stroke-width: 2.5; stroke-linecap: round;vector-effect: non-scaling-stroke; }
+/* Sparkline / SVG Styles */
+.line-path {
+  stroke-width: 0.15625rem; /* 2.5px */
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
 
-/* Axis Lines - very subtle */
 .axis-line {
   stroke: rgb(255, 220, 0);
-  stroke-width: 1;
-  stroke-dasharray: 2, 2; /* Makes them dotted/dashed */
+  stroke-width: 0.0625rem; /* 1px */
+  stroke-dasharray: 0.125rem, 0.125rem; /* 2px */
 }
 
-/* The Main Trend Line - needs a glow to stand out from the grid */
 .line-path {
   fill: none;
-  stroke-width: 3;
+  stroke-width: 0.1875rem; /* 3px */
   stroke-linecap: round;
-  filter: drop-shadow(0 0 6px rgba(76, 175, 80, 0.4)); /* Green glow for positive */
+  filter: drop-shadow(0 0 0.375rem rgba(76, 175, 80, 0.4)); /* 6px */
   transition: stroke 0.3s ease;
 }
-
-/*!* Ensure the footer has a clean layout *!*/
-/*.card-footer {*/
-/*  position: relative;*/
-/*  height: 80px;*/
-/*  width: 100%;*/
-/*  margin-top: 10px;*/
-/*  background: rgba(0, 0, 0, 0.1); !* Slight darken for the graph area *!*/
-/*  border-radius: 8px;*/
-/*}*/
 
 .card-bg-image {
   opacity: 0.8;
   position: absolute;
-  inset: 0; /* top, right, bottom, left all at 0 */
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* Crops the image to fit the container */
-  object-position: center; /* Ensures the focus is the middle, not the top-left */
+  object-fit: cover;
+  object-position: center;
   z-index: 1;
+}
+
+/* --- Keep the @keyframes as is (percentages don't change) --- */
+@keyframes shine-sweep {
+  0% { transform: translateX(-150%) skewX(-25deg); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateX(250%) skewX(-25deg); opacity: 0; }
 }

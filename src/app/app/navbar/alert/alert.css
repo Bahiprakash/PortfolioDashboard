@@ -1,11 +1,11 @@
 .glass-alert-btn {
   position: relative;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Edge shine */
+  width: 2.625rem;  /* 42px */
+  height: 2.625rem; /* 42px */
+  border-radius: 0.75rem; /* 12px */
+  border: 0.0625rem solid rgba(255, 255, 255, 0.15); /* 1px */
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0.625rem); /* 10px */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -17,11 +17,10 @@
 
 /* --- Hover Effect --- */
 .glass-alert-btn:hover {
-  transform: translateY(-2px) scale(1.05);
+  transform: translateY(-0.125rem) scale(1.05); /* -2px */
   background: linear-gradient(180deg, rgba(0, 187, 229, 0.74) 0%, rgb(0, 46, 75) 100%);
-  border-color: rgba(0, 187, 229, 0.74); /* Theme accent */
-  box-shadow: 0 0 15px rgba(179, 136, 255, 0.3);
-
+  border-color: rgba(0, 187, 229, 0.74);
+  box-shadow: 0 0 0.9375rem rgba(179, 136, 255, 0.3); /* 15px */
 }
 
 .btn-shine {
@@ -47,7 +46,7 @@
 .icon-container {
   position: relative;
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
 }
 
 .glass-alert-btn:hover .icon-container {
@@ -56,14 +55,14 @@
 
 .notification-dot {
   position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 8px;
-  height: 8px;
+  top: -0.125rem;   /* -2px */
+  right: -0.125rem; /* -2px */
+  width: 0.5rem;    /* 8px */
+  height: 0.5rem;   /* 8px */
   background-color: #ff5252;
   border-radius: 50%;
-  border: 2px solid #0f0f0f; /* Matches navbar dark bg */
-  box-shadow: 0 0 8px rgba(255, 82, 82, 0.6);
+  border: 0.125rem solid #0f0f0f; /* 2px */
+  box-shadow: 0 0 0.5rem rgba(255, 82, 82, 0.6); /* 8px */
 }
 
 /* Click Animation */

@@ -3,7 +3,7 @@
   top: 0;
   z-index: 50;
   background: #0b0f1a;
-  border-bottom: 1px solid #1f2937;
+  border-bottom: 0.06rem solid #1f2937;
 }
 
 .navbar__container {
@@ -47,16 +47,16 @@
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 
 .btn-secondary {
   background: transparent;
   color: #cbd5f5;
-  border: 1px solid #334155;
+  border: 0.06rem solid #334155;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 
@@ -89,7 +89,7 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .navbar__links,
   .navbar__actions {
     display: none;

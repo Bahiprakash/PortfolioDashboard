@@ -1,9 +1,9 @@
 .card {
   position: relative; /* Essential: Keeps the absolute image inside the card */
-  width: 350px;
+  width: 21.875rem;    /* 350px */
   min-height: 100%;
-  padding: 24px;
-  border-radius: 16px;
+  padding: 1.5rem;    /* 24px */
+  border-radius: 1rem; /* 16px */
   overflow: hidden;    /* Ensures the image doesn't bleed past rounded corners */
   background: #1e2329; /* Fallback background color */
 }

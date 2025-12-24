@@ -1,17 +1,17 @@
 .cookie-card {
   position: relative;
-  padding: 20px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.42);
+  padding: 1.25rem; /* 20px */
+  border-radius: 1rem; /* 16px */
+  border: 0.0625rem solid rgba(255, 255, 255, 0.42); /* 1px */
   overflow: hidden;
 
   justify-content: center;
   align-items: center;
 
-  /* Glass Effect: Top-to-Bottom Gradient */
+  /* Glass Effect */
   background: radial-gradient(at top center, rgba(164, 112, 0, 0.34) 1%, rgba(255, 255, 255, 0.02));
-  backdrop-filter: blur(15px);
-  box-shadow: 0 10px 30px rgb(0, 0, 0);
+  backdrop-filter: blur(0.9375rem); /* 15px */
+  box-shadow: 0 0.625rem 1.875rem rgb(0, 0, 0); /* 10px 30px */
 }
 
 /* The Spotlight Reflection at the Top */
@@ -21,89 +21,88 @@
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  height: 1px;
+  height: 0.0625rem; /* 1px */
   background: linear-gradient(
     90deg,
     transparent,
-    rgb(255, 222, 0,1),
+    rgba(255, 222, 0, 1),
     transparent
   );
-  filter: blur(1px);
-  box-shadow: 0 2px 15px rgba(255, 255, 255, 0.4);
+  filter: blur(0.0625rem); /* 1px */
+  box-shadow: 0 0.125rem 0.9375rem rgba(255, 255, 255, 0.4); /* 2px 15px */
 }
 
 .card-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  padding: 8px;
-  border-radius: 12px;
+  gap: 0.75rem; /* 12px */
+  margin-bottom: 1.25rem; /* 20px */
+  padding: 0.5rem; /* 8px */
+  border-radius: 0.75rem; /* 12px */
   background: radial-gradient(at top center, rgba(255, 173, 0, 0.55) 1%, rgba(255, 255, 255, 0));
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.4); /* 10px 15px */
 }
 
 .icon-cookie {
-  font-size: 16px;
-  color: white; /* Matching your purple accent */
+  font-size: 1rem; /* 16px */
+  color: white;
 }
 
 .heading {
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.03125rem; /* 0.5px */
   text-align: center;
-
 }
 
 .card-text {
   color: rgb(210, 191, 191);
-  font-size: 12px;
+  font-size: 0.75rem; /* 12px */
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px */
   text-align: center;
 }
 
 /* Button Styles */
 .button-group {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem; /* 10px */
 }
 
 button {
   flex: 1;
-  padding: 10px;
-  border-radius: 12px;
-  border: rgba(255, 255, 255, 0.7);
-  font-size: 13px;
+  padding: 0.625rem; /* 10px */
+  border-radius: 0.75rem; /* 12px */
+  border: 0.0625rem solid rgba(255, 255, 255, 0.7); /* Standardized to 1px */
+  font-size: 0.8125rem; /* 13px */
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s, opacity 0.2s;
-
 }
 
 .btn-deny {
-  background: rgba(233, 221, 255, 0.1); /* Muted purple */
+  background: rgba(233, 221, 255, 0.1);
   color: #f6f3ff;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.8);
 }
 
 .btn-deny:hover {
   background: linear-gradient(180deg, rgb(0, 209, 255) 0%, rgb(0, 46, 75) 100%);
-  border-color: rgba(0, 187, 229, 0.74); /* Theme accent */
+  border-color: rgba(0, 187, 229, 0.74);
 }
 
 .btn-accept {
-  background: linear-gradient(90deg, #4caf50, #8bc34a); /* Green gradient */
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
   color: white;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.8);
+  border: none; /* Green button often looks better without border */
 }
 
 button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem); /* 2px */
   opacity: 0.9;
 }
 
