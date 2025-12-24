@@ -25,11 +25,17 @@
   width: 100%;
   padding: 10px 10px 8px 40px; /* Extra padding on left for icon */
   font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', sans-serif;
   border: 2px solid rgba(231, 243, 255, 0.66);
   border-radius: 12px;
   outline: none;
   transition: all 0.2s ease-in-out;
   background: transparent;
+
+  color: #ffffff;           /* Changes the typed text to white */
+  caret-color: #0083ee;
 }
 
 /* Hover & Focus States */

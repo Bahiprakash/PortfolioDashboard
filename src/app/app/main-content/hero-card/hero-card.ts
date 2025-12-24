@@ -1,11 +1,9 @@
 import {Component, Input} from '@angular/core';
-import {StackedSvgComponent} from '../stacked-svg/stacked-svg';
 import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-hero-card',
              imports: [
-               StackedSvgComponent,
                NgOptimizedImage
              ],
   templateUrl: './hero-card.html',

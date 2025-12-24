@@ -18,6 +18,10 @@
   border-radius: 16px;
 }
 
+.total-card:hover .card-bg-image{
+  opacity: 1;
+}
+
 .card-info{
   position: relative;  /* Places content on a new stacking context */
   z-index: 2;
@@ -40,7 +44,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  color: #0796ef;
+
 
 }
 
@@ -53,10 +57,12 @@
 
 
 .currency{
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: 14px;
   letter-spacing: 0.5px;
   line-height: 1.2;
+  color: #7843ee;
+
 }
 
 .change{
@@ -64,7 +70,7 @@
   flex-direction: row;
   align-items: center;
   gap: 16px;
-  color: #08ee49;
+  color: #8385ff;
 }
 
 .card-footer { height: 160px; margin-top: -30px; margin-bottom: 30px; justify-content: center; overflow: visible; align-content: center; }
@@ -72,6 +78,7 @@
 .line-path { stroke-width: 2.5; stroke-linecap: round;vector-effect: non-scaling-stroke; }
 
 .card-bg-image {
+  opacity: 0.8;
   position: absolute;
   inset: 0; /* top, right, bottom, left all at 0 */
   width: 100%;
@@ -103,6 +110,13 @@
   transition: stroke 0.3s ease;
 }
 
+.separate-text{
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  color: #ffffff;
+}
 /*!* Shimmer Spotlight *!*/
 /*.card-shine {*/
 
