@@ -1,19 +1,15 @@
 import {Component, Input} from '@angular/core';
 import {CardHorizontal} from '../cardHorizontal/cardHorizontal';
 import {CardHorizontal2} from '../cardHorizontal2/cardHorizontal2';
-import {Card4} from '../card4/card4';
 import {CardHorizontal3} from '../cardHorizontal3/cardHorizontal3';
-import {Card5} from '../card5/card5';
+
 
 @Component({
   selector: 'app-hero-card2',
              imports: [
                CardHorizontal,
                CardHorizontal2,
-               Card4,
-               CardHorizontal3,
-               Card5,
-               CardHorizontal2
+               CardHorizontal3
              ],
   templateUrl: './hero-card2.html',
   styleUrl: './hero-card2.css',

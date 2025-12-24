@@ -41,12 +41,28 @@
 }
 
 /* Internal Spotlight Shine */
-.card-shine {
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1; /* Fade in quickly at the start */
+  }
+  80% {
+    opacity: 1; /* Stay visible while crossing the card */
+  }
+  100% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0; /* Fade out completely before stopping */
+  }
+}
 
+.card-shine {
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 50%;
+  left: 0;
+  width: 60%;
   height: 100%;
   background: linear-gradient(
     90deg,
@@ -54,16 +70,15 @@
     rgba(255, 255, 255, 0.2),
     transparent
   );
-  transform: skewX(-20deg);
-  transition: none;
+  opacity: 0; /* Hidden by default */
+  pointer-events: none;
 }
 
-/* Trigger Shimmer on Hover */
+/* Trigger Animation on Hover */
 .glass-card:hover .card-shine {
-  left: 150%;
-  transition: left 0.7s ease-in-out;
-
+  animation: shine-sweep 0.8s ease-in-out forwards;
 }
+
 .coin-info{
   display: flex;
   flex-direction: column;

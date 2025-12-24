@@ -7,7 +7,6 @@ import {HeadingMini2} from './heading-mini2/heading-mini2';
 import {Card4} from './card4/card4';
 import {Card5} from './card5/card5';
 import {HeadingMini3} from './heading-mini3/heading-mini3';
-import {HeadingMini4} from './heading-mini4/heading-mini4';
 import {HeroCard2} from './hero-card2/hero-card2';
 
 @Component({
@@ -21,7 +20,6 @@ import {HeroCard2} from './hero-card2/hero-card2';
                Card4,
                Card5,
                HeadingMini3,
-               HeadingMini4,
                HeadingMini3,
                HeroCard2
              ],
