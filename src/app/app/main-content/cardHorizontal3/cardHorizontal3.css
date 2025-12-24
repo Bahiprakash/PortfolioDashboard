@@ -153,7 +153,7 @@
 /*}*/
 
 .card-bg-image {
-  opacity: 0.8;
+  opacity: 1;
   /*position: absolute;*/
   inset: 0; /* top, right, bottom, left all at 0 */
   width: 100%;
